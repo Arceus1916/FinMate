@@ -29,9 +29,12 @@ FinMate is a full-stack personal finance management application built with Expre
 
 ---
 
-## Project Structure
 
----
+## Project File Structure
+
+The FinMate project is organized as follows:
+
+```
 FINMATE/
 │
 ├── backend/
@@ -59,8 +62,8 @@ FINMATE/
         ├── package-lock.json
         ├── README.md
         └── vite.config.js   # Vite configuration
+```
 
----
 
 ## Tech Stack
 
