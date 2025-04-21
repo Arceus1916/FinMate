@@ -31,16 +31,34 @@ FinMate is a full-stack personal finance management application built with Expre
 
 ## Project Structure
 
-```
-finmate/
-├── backend/           # Node.js, Express, MongoDB API
-│   ├── ...            # All backend .js files
-│   └── util/          # Utility functions
+---
+FINMATE/
+│
+├── backend/
+│   ├── config/          # Configuration files (e.g., DB connection)
+│   ├── controllers/     # Express route controllers
+│   ├── middleware/      # Express middleware functions
+│   ├── models/          # Mongoose models (MongoDB schemas)
+│   ├── node_modules/    # Backend dependencies
+│   ├── routes/          # Route definitions
+│   ├── uploads/         # File uploads (if any)
+│   ├── .env             # Environment variables
+│   ├── package.json     # Backend dependencies and scripts
+│   ├── package-lock.json
+│   └── server.js        # Main entry point for the backend server
+│
 └── frontend/
-    └── finmate/       # React app (Vite)
-        ├── ...        # All frontend .jsx files (except util)
-        └── util/      # Utility functions
-```
+    └── FinMate/
+        ├── node_modules/    # Frontend dependencies
+        ├── public/          # Static assets
+        ├── src/             # React source files (.jsx)
+        ├── .gitignore
+        ├── eslint.config.js
+        ├── index.html
+        ├── package.json     # Frontend dependencies and scripts
+        ├── package-lock.json
+        ├── README.md
+        └── vite.config.js   # Vite configuration
 
 ---
 
