@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/add", protect, addExpense);
 
 // Route to get all expenses
-router.get("/", protect, getAllExpenses);  // Changed to '/' to represent all expenses
+router.get("/get", protect, getAllExpenses);  // Changed to '/' to represent all expenses
 
 // Route to download expenses in Excel format
 router.get("/download", protect, downloadExpenseExcel);
