@@ -24,7 +24,7 @@ export const useUserAuth = () => {
         console.error("Failed to fetch user info: ", error);
         if (isMounted) {
           clearUser();
-          navigate("login");
+          navigate("/login");
         }
       }
     };
@@ -35,4 +35,8 @@ export const useUserAuth = () => {
       isMounted = false;
     };
   }, [updateUser, clearUser, navigate]);
+  return {
+    isAuthenticated: !!user,
+    user,
+  };
 };

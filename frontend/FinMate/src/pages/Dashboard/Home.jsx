@@ -11,10 +11,11 @@ import InfoCard from '../../components/Cards/InfoCard';
 import RecentTransaction from '../../components/Dashboard/RecentTransaction';
 
 const Home = () => {
-  useUserAuth();
-
+  useUserAuth(); 
   const navigate = useNavigate();
+
   const [dashboardData, setDashboardData] = useState(null);
+
   const [loading, setLoading] = useState(false);
 
   const fetchDashboardData = async () => {
@@ -35,10 +36,6 @@ const Home = () => {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    fetchDashboardData();
-  }, []);
 
   return (
     <DashboardLayout activeMenu="Dashboard">
@@ -66,9 +63,9 @@ const Home = () => {
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-6'>
           <RecentTransaction 
-            transactions ={dashboardData?.recentTransactions}
-            onSeeMore = {() => navigate("/expense")}
-            />
+            transactions={dashboardData?.recentTransactions}
+            onSeeMore={() => navigate("/expense")}
+          />
         </div>
       </div>
     </DashboardLayout>
